@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ICustomer } from '../shared/interfaces';
 
 @Component({
   selector: 'app-customers',
@@ -6,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./customers.component.css']
 })
 export class CustomersComponent implements OnInit {
-people: any[];
+people: ICustomer[];
 title: string;
   constructor() { }
+  isVisible = true;
+  changeVisibility() {
+    this.isVisible = !this.isVisible;
+  }
+
 
   ngOnInit() {
     this.title = "Customers";
