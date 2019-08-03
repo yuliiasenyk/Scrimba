@@ -1,4 +1,4 @@
 <p [hidden]="!isVisible"> {{ title }}</p>
 <button (click)="changeVisibility()"> show or hide </button>
 <br/>
-<app-customers-list > </app-customers-list>
+<app-customers-list [customers]="people"> </app-customers-list>
